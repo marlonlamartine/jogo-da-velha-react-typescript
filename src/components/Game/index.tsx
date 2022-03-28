@@ -2,10 +2,11 @@ import React, { FC, useEffect, useState } from "react";
 import Board from "../Board";
 import BoardHeader from "../BoardHeader";
 import Column from "../Column";
+import Footer from "../Footer";
 import Square from "../Square";
 
 let whosTurnState: number = 1;
-let hasWinner = false;
+let hasWinner = '';
 
 const Game: FC = () => {
 
@@ -44,24 +45,26 @@ const Game: FC = () => {
     };
 
     if (combination && whosTurnState === 2) {
-        console.log('X venceu')
+        hasWinner = 'O jogador X Venceu';
     }
     else if (combination && whosTurnState === 1) {
-        console.log('O venceu')
+        hasWinner = 'O jogador O Venceu';
     }
-
-
-
 
     if (!valueState.includes('') && !combination) {
-        console.log('empate');
+        hasWinner = 'O jogo deu empate';
     }
 
 
+    const reset = () => {
+        setValueState(['', '', '', '', '', '', '', '', '']);
+        whosTurnState = 1;
+        hasWinner = '';
+    }
 
     return (
         <div>
-            <BoardHeader />
+            <BoardHeader btnReset={() => { reset() }} />
             <Board>
                 <Column>
                     <Square stillPlaying={stillPlayingState}
@@ -106,6 +109,7 @@ const Game: FC = () => {
                         clicked={() => { changeSquare(8) }} />
                 </Column>
             </Board>
+            <Footer gameFinalStatus={hasWinner} />
         </div>
     );
 }

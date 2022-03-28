@@ -1,0 +1,16 @@
+.containerFooter{
+    display: flex;
+    height: 120px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    margin-top: 50px;
+    
+}
+
+.gameStatus{
+    font-size: 36;
+    font-weight: bold;
+
+}
