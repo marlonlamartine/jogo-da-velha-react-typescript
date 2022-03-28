@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    flex-wrap: wrap;
+    align-content: center;
+
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(top, #222, #333);
+}
+
+.board{
+    display: flex;
+    justify-content: space-between;
+    width: 380px;
+    height: 380px;
+    margin-top: 50px;
+    
+    
+}
+
+
+

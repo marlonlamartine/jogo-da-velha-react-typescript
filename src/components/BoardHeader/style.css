@@ -1,0 +1,23 @@
+.containerBoardHeader{
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.btn-new-game{
+    width: 150px;
+    height: 50px;
+    background-color: blue;
+    border: 1px solid blue;
+    border-radius: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: antiquewhite;
+    font-size: 20px;
+
+}
